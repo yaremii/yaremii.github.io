@@ -1,0 +1,49 @@
+div {
+      	width: 650px;
+      	height: 150px;
+}
+.first {
+      top: 950px;
+      left: 150px;
+      background: #60B9CE;
+      border-color: #015367;
+font-size:12pt;
+border-style: dashed;
+color: #FFF5EE;
+padding: 30;
+position: absolute; 
+left: 10; 
+top: 10; 
+text-indent: 30;
+ }
+.second {
+      top: 950px;
+      left: 150px;
+      background: #38B2CE;
+      border-color: #015367;
+font-size:12pt;
+border-style: ridge;
+color: #F0F8FF;
+padding: 30;
+     position: relative;
+     top: 250; 
+     left: 60px;
+     text-indent: 40;
+ }
+.third {
+      top: 950px;
+      left: 150px;
+      background: #04819E;
+      border-color: #015367;
+font-size:12pt;
+border-style: dotted;
+color:#F0FFFF;
+padding: 30;
+     position: relative;
+     top: 270;
+     left: 120px;
+     text-indent: 50;
+    }
+    .body{
+      background-image: url(../fon3.jpg);
+    }

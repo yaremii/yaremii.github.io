@@ -1,0 +1,52 @@
+h1, h4{
+    text-align: center;
+    font-weight: 600;
+    margin: 0px;
+}
+h4{
+    font-style: italic;
+}
+P{
+    text-indent: 15px;
+}
+div.t1{
+    width: 600px;
+    background-position: center;
+    margin-right: 20px;
+}
+div.t2{
+    width: 400px;
+    left:630px;
+
+}
+div.t1, div.t2{
+    top: 100px;
+    height: 120%; 
+    padding: 10px;
+    border:5px double #cf0000;
+    position: absolute ;
+    overflow: scroll;
+    overflow: auto;
+    background-image: url(../bg_menu.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCC99;
+}
+div.all{
+    position: absolute;
+    left: 20%;
+    height: 100%;
+}
+ul {
+    list-style-type: none;
+}
+ul li:before {
+    content: "– ";
+    position: relative;
+    left: -20px;
+}
+body{
+    background-color: #ffffff;
+    background-image: url(../ramka.gif);
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+}
