@@ -1,0 +1,51 @@
+body{
+    background-image: url(../photo/fon1.jpg);
+}
+.nat {
+position:absolute;
+font-family:Century;
+font-size:3em;
+font-weight:bold;
+z-index:20;
+text-shadow: 1px 1px 1px rgb(44, 255, 54), 0 0 2em rgb(171, 192, 182);
+}
+#nat1 {
+left:630px;
+top:280px;
+color:rgb(255, 255, 255);
+}
+#nat2 {
+left:634px;
+top:284px;
+color:rgb(0, 0, 0);
+}
+.box {
+position:fixed;
+height:300px;
+width:300px;
+border:15px solid #000;
+}
+#box1 {
+left:550px;
+top:150px;
+border-color:rgb(45, 95, 54);
+z-index:40;
+}
+#box2 {
+left:585px;
+top:185px;
+border-color:rgb(10, 82, 20);
+z-index:30;
+}
+#box3 {
+left:585px;
+top:150px;
+border-color:#060;
+z-index:20;
+}
+#box4 {
+left:550px;
+top:185px;
+border-color:rgb(0, 71, 12);
+z-index:inherit;
+}

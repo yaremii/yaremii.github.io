@@ -1,0 +1,31 @@
+p{
+    text-indent: 30;
+    font-size: 20;
+}
+.body{
+    padding: 70;
+    background-image: url(../photo/fon2.jpg) ;
+    background-attachment: scroll;
+    color:aliceblue;
+    text-shadow: 1px 1px 1px rgb(11, 0, 163), 0 0 0.2em rgb(0, 60, 255);
+}
+h2{
+    font-size: 100;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(11, 0, 163), 0 0 1em rgb(255, 255, 255);
+}
+.left{
+float: left;
+}
+.right{
+    float: right;
+}
+.none{
+    float: none;
+}
+.inherit{
+    float: inherit;
+}
+.left, .right, .none, .inherit{
+    margin: 50px 50px 50px 50px;
+}
