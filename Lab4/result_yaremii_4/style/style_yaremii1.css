@@ -12,29 +12,29 @@ div {
 position: absolute; 
 left: 1100;
 top: 100;
-background-image: url(../photo/_1.jfif);
+background-image: url(../photo/1f.jfif);
 }
 .fixed {
 position: fixed;
 left: 500;
 top: 100;
-background-image: url(../photo/_2.jpg);
+background-image: url(../photo/2f.jpg);
 }
 .relative {
 position: relative;
 top: 400;
 left: 250;
-background-image: url(../photo/_3.jpg);
+background-image: url(../photo/3f.jpg);
 }
 .static {
     position: static;
-    background-image: url(../photo/_4.jpg);
+    background-image: url(../photo/4f.jpg);
     }
 .inherit {
         position: inherit;
         margin-top: 300;
         margin-left: 250;
-        background-image: url(../photo/_5.jpg);
+        background-image: url(../photo/5f.jpg);
  font-size: 1em;
         }
 .body{
