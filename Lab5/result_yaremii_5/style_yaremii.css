@@ -1,0 +1,109 @@
+body{
+    background-image: url(photo/fon.jpg);
+    background-attachment: scroll;
+}
+.column {
+    width: 650px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    overflow: scroll;
+    overflow: auto;
+    font-family: Gill Sans, sans-serif;
+  }
+
+  .column-1{
+    background-color: #16161690;
+    margin-top:40px;
+    position: absolute;
+    }
+
+.f1{ 
+    margin-left: 800px;
+}
+.f2{ 
+    margin-left: 20px;
+    margin-top: 470px;
+    margin-bottom: 20px;
+}
+.f3{ 
+    margin-left: 680px;
+    margin-top: 400px;
+    margin-bottom: 20px;
+}
+    .column-2{
+        background-color: #16161690;
+        margin-left: 800px;
+        margin-top: 20px;
+      position: absolute;
+        }
+            .column-4{
+                position: absolute;
+                margin-left: 40px;
+                background-color: #16161690;  
+                margin-top: 20px;
+                }
+       p,li{
+            text-indent: 25px;
+            margin-left: 40;
+            margin-right: 40;
+            text-align: justify;
+           text-shadow: 1px 1px 1px rgb(0, 0, 0),0 0 1em rgb(104, 100, 100);
+            font-size: 16;
+            color: #ffffff;
+            font-weight: 300;
+        }
+        h3{
+            text-indent: 25px;
+            margin-left: 40;
+            margin-right: 40;
+            text-align: justify;
+            text-shadow: 1px 1px 1px rgb(255, 255, 255),0 0 1em rgb(255, 255, 255);
+            color: #000000;
+            font-weight: 800;
+        }
+        h1{
+            text-indent: 25px;
+            margin-left: 40;
+            margin-right: 40;
+            text-align: justify;
+           text-shadow: 1px 1px 1px rgb(255, 255, 255),0 0 1em rgb(255, 255, 255);
+                        color: #000000;
+            font-weight: 800;
+            font-family: Gill Sans, sans-serif;
+        }
+        aside {
+            width: 50%;
+            padding-left: .9rem;
+            margin-left: .9rem;
+            float: right;
+            box-shadow: inset 8px 0 5px -5px#16161690;
+            font-style: italic;
+            color: #16161690;
+            margin-right: 40;
+        }
+            aside > p {
+            margin: .5rem;
+        }
+        footer{
+            font-size: 25;
+            color: #030303cb;
+            font-family: Gill Sans, sans-serif;
+            font-weight: 500;
+            text-shadow: 1px 1px 1px rgb(255, 255, 255),0 0 1em rgb(255, 255, 255);
+        }
+        mark{
+            background: #5f5f5f93;
+            padding: 0 3px;
+            border: 3px dashed rgb(29, 29, 29);
+        }
+        .tag {
+            color: rgb(0, 0, 0); /* Цвет текста */
+            font-family: Gill Sans, sans-serif;
+            quotes: """ """; /* Устанавливаем вид кавычек */
+           } 
+           .tag:before {
+            content: open-quote; /* Добавляем перед текстом открывающую кавычку */
+          }
+           .tag:after {
+            content: close-quote; /* Добавляем после текста закрывающую кавычку */
+           }
