@@ -97,13 +97,13 @@ body{
             border: 3px dashed rgb(29, 29, 29);
         }
         .tag {
-            color: rgb(0, 0, 0); /* Цвет текста */
+            color: rgb(0, 0, 0);
             font-family: Gill Sans, sans-serif;
-            quotes: """ """; /* Устанавливаем вид кавычек */
+            quotes: """ """; 
            } 
            .tag:before {
-            content: open-quote; /* Добавляем перед текстом открывающую кавычку */
+            content: open-quote; 
           }
            .tag:after {
-            content: close-quote; /* Добавляем после текста закрывающую кавычку */
+            content: close-quote; 
            }
