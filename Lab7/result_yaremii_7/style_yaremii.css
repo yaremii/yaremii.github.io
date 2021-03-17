@@ -1,0 +1,89 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@600&display=swap');
+        @font-face {
+            font-family: 'Pompadour';
+            src: url(01_APompadourSample.ttf) format("truetype");
+        }
+        a{
+                color: #E5E5E5;
+        }
+        .site::after {
+    content: ' (' attr(href) ') '; 
+    font-size: 2em; 
+    background: rgba(231, 172, 194, 0.425); 
+   }
+
+        body {
+            color: #E5E5E5;
+            font-size: calc(1vw + 4px);
+            padding-left: 5em;
+            padding-right: 5em;
+            display: flex;
+            flex-direction: column;
+            margin: 0;       
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        article {
+            background-color: #C2B4D6;
+            flex: 2 2 12em;
+            padding: 1em;
+            overflow: scroll;
+            overflow: auto;
+            overflow-x: none;
+            font-family: 'Cormorant Unicase', serif;
+        }
+
+        nav,
+        aside {
+            flex: 1;
+            background-color: #57648C;
+            padding: 0.5em;
+        }
+
+        nav {
+            order: -1;
+        }
+
+        header,
+        footer {
+            flex: 0 0 10em;
+            background-color: #934A5F;
+            overflow: scroll;
+            overflow: auto;
+            overflow-x: none;
+            padding: 0.5em;
+            font-family: 'Pompadour', serif;
+        }
+
+        @media print and (min-resolution: 300dpi) {
+            body {
+                font-family: Times, 'Times New Roman', serif;
+            }
+            h1, p {
+                color: #000;
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            body {
+                min-height: 100vh;
+            }
+            main {
+                flex-direction: row;
+                min-height: 100%;
+                flex: 1 1 auto;
+            }
+        }
+
+        @media all and (max-width: 600px){
+       body, header, footer,  nav, aside{
+          font-size:10px;
+       }
+       body{
+               background-color: #f700ff;     
+       }
+   }
