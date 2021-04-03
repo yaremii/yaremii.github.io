@@ -1,0 +1,211 @@
+   *{
+	font-family:  Arial, Helvetica, sans-serif;
+   }
+
+
+	body {
+		background-color: #000000;
+		}
+
+	header {
+		background-color: #d64836;
+		background-attachment: scroll,	fixed;
+		height: 100%;
+		width: 20%;
+		right: 0;
+		top: 0;
+		position: fixed;
+		text-align: right;
+	}
+p, h3, h1{
+	text-align: center;
+}
+	main {
+		margin-right: 20%;
+		color: #ffeaea
+	}
+	form {
+		text-align: left;
+		margin-left: 10px;
+	}
+	input[type='reset'],  input[type='submit']{
+		background-color: #2b0d03;
+		border: none;
+		color: white;
+		padding: 5px 14px;
+		text-align: center;
+		font-size: 14px;
+		opacity: 0.75;
+		transition: 0.3s;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		margin-left:25px;
+	}
+	input[type='reset']:hover {opacity: 1}
+	input[type='submit']:hover {opacity: 1}
+
+#city{
+	font-size: 14px;
+	margin-left:100px;
+	padding: 1px 15px;
+}
+
+textarea{
+	font-size: 16px;
+	background-color: #ffffff;
+	padding: 10px;
+
+}
+
+select{
+	font-size: 14px;
+	margin-right:70px;
+	padding: 1px 15px;
+}
+
+.slidecontainer {
+	width: 85%;
+  }
+  
+  .slider {
+	-webkit-appearance: none;
+	width: 80%;
+	height: 7px;
+	border-radius: 2px;
+	background: #ffffff;
+	outline: none;
+	opacity: 0.8;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+  }
+  
+  .slider:hover {
+	opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #2b0d03;
+	cursor: pointer;
+  }
+
+  .button1 {
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 30px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	background-color: white; 
+	color: black; 
+	border: 2px solid #2b0d03;
+  }
+
+  .button1:hover {
+	background-color: #2b0d03;
+	color: white;
+  }
+
+  #email:invalid {
+	background-color: #ffdddd;
+  } 
+  #email:valid {
+	background-color: #ddffdd;
+  }
+  #pwd:invalid {
+	background-color: #ffdddd;
+  }
+  #pwd:valid {
+	background-color: #ddffdd;
+  }
+
+#pwd:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px #4d90f0;
+}
+#pwd:focus::-moz-placeholder {
+  color: transparent;
+}
+#pwd:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+#email:focus {
+	outline: none;
+	box-shadow: 0 0 1px 1px #4d90f0;
+  }
+#email:focus::-moz-placeholder {
+	color: transparent;
+  }
+#email:focus::-webkit-input-placeholder {
+	color: transparent;
+  }
+
+  p:only-of-type {
+	background: #2b0d0328;
+  }
+
+  optgroup::first-line {
+	font-weight: 700;
+	color:#2b0d03;
+  }
+
+  .title{
+	  font-size: 2cm;
+	  text-align: center;
+  }
+
+  ul.hr {
+    margin: 0; 
+    padding: 4px; 
+   }
+   ul.hr li {
+    display: inline; 
+    margin-right: 5px; 
+    padding: 110px;
+   }
+
+	a:link {
+	color: #ffdddd;
+  }
+  	a:visited {
+	color: rgb(255, 222, 179);
+  }
+  	a:hover {
+	color: #d64836;
+  }
+ 	 a:active {
+	color: rgb(251, 202, 255);
+  } 
+
+  img:hover
+  {
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+	transition-duration: 0.7s;
+	transform: scale(1.1);
+  }
+
+  h1::first-letter {
+	font-size: 45px;
+  }
+
+  h3::after{
+	content: " Ми будемо Вам вдячні";
+	font-size: 60%;
+	text-align: center;
+  }
+  h3::before{
+	content: ":) ";
+  }
+	

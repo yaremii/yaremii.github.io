@@ -1,0 +1,139 @@
+<html>
+
+<head>
+	<title>Sushi Bar</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="yaremii_style.css">
+</head>
+
+<body>
+	<header>
+
+		<p>
+		<form>
+			<fieldset>
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email"><br><br>
+				<label for="pwd">Пароль:</label>
+				<input type="password" id="pwd" name="pwd" minlength="8" autofocus><br><br>
+				<input type="reset" value=" Скасувати ">
+				<input type="submit" value=" Надіслати ">
+			</fieldset>
+		</form>
+		</p>
+
+		<p>
+		<form>
+			<label for="city">Виберіть місто:</label>
+			<select name="city" id="city">
+				<option>Київ</option>
+				<option>Львів</option>
+				<option>Харків</option>
+				<option>Одеса</option>
+			</select>
+		</form>
+		</p>
+
+		<form>
+			<p>Введіть свою адресу</p>
+			<input maxlength="60" size="40">
+		</form>
+
+		<p><b>____________________________</b></p>
+		<form>
+			<p><b>Додатки</b></p>
+			<input type="radio" name="a" value="набір паличок" checked> набір паличок</p>
+			<input type="checkbox" name="a" value="імбир"> імбир</p>
+			<input type="checkbox" name="a" value="васабі"> васабі</p>
+		</form>
+
+		<p><b>Соуси</b></p>
+		<select multiple size=3>
+			<optgroup label="Гострі">
+				<option>Спайсі</option>
+				<option>Кімчі</option>
+			</optgroup>
+			<optgroup label="Традиційні">
+				<option>Соєвий соус</option>
+				<option>Теріякі</option>
+				<option>Унагі</option>
+			</optgroup>
+		</select>
+		<p><b>____________________________</b></p>
+
+		<br>
+		<button class="button1" type="button" onclick="alert('Ваше замовлення прийняте! Очікуйте дзвінка!')">Підтвердити
+			замовлення</button>
+
+		<p>Оцініть якість доставки</p>
+		<div class="slidecontainer">
+			<input type="range" min="0" max="10" value="5" class="slider" id="myRange">
+		</div>
+	</header>
+
+	<main>
+		<div class="title">SUSHI BAR</div>
+		<hr>
+		<ul class="hr">
+			<li> <a href="#sushi">СУШІ</a></li>
+			<li> <a href="#roll">РОЛИ</a></li>
+			<li> <a href="#gunkan">ГУНКАНИ</a></li>
+			<li> <a href="#hand">ХЕНД РОЛИ</a></li>
+		</ul>
+		<hr>
+		<br>
+		<h1><a name="sushi">СУШІ</a></h1>
+		<br>
+		<p>
+			<img src="photo/sushi1.PNG" width="350" height="300">
+			<img src="photo/sushi2.PNG" width="350" height="300">
+			<img src="photo/sushi3.PNG" width="350" height="300">
+			<img src="photo/sushi4.PNG" width="350" height="300">
+			<img src="photo/sushi5.PNG" width="350" height="300">
+		</p>
+		<br>
+		<h1> <a name="roll">РОЛИ</a></h1>
+		<br>
+		<p>
+			<img src="photo/roll1.PNG" width="350" height="300">
+			<img src="photo/roll2.PNG" width="350" height="300">
+			<img src="photo/roll3.PNG" width="350" height="300">
+			<img src="photo/roll4.jpg" width="350" height="300">
+			<img src="photo/roll5.PNG" width="350" height="300">
+			<img src="photo/roll6.jpg" width="350" height="300">
+			<img src="photo/roll7.PNG" width="350" height="300">
+			<img src="photo/roll8.jpg" width="350" height="300">
+			<img src="photo/roll11.PNG" width="350" height="300">
+			<img src="photo/roll10.PNG" width="350" height="300">
+			<img src="photo/roll9.PNG" width="350" height="300">
+		</p><br>
+		<h1><a name="gunkan">ГУНКАНИ</a></h1>
+		<br>
+		<p>
+			<img src="photo/gunkan1.jpg" width="350" height="300">
+			<img src="photo/gunkan2.jpg" width="350" height="300">
+			<img src="photo/gunkan3.jpg" width="350" height="300">
+			<img src="photo/gunkan4.jpg" width="350" height="300">
+			<img src="photo/gunkan5.jpg" width="350" height="300">
+			<img src="photo/gunkan6.jpg" width="350" height="300">
+		</p>
+		<br>
+		<h1><a name="hand">ХЕНД РОЛИ</a></h1>
+		<br>
+		<p>
+			<img src="photo/hand1.png" width="350" height="300">
+			<img src="photo/hand2.png" width="350" height="300">
+			<img src="photo/hand3.jpg" width="350" height="300">
+			<img src="photo/hand4.png" width="350" height="300">
+			<img src="photo/hand5.png" width="350" height="300">
+			<img src="photo/hand6.jpg" width="350" height="300">
+		</p>
+		<br>
+		<br>
+		<h3>Бажаєте залишити відгук? </h3>
+		<p><textarea cols="50" rows="10"></textarea></p>
+	</main>
+
+</body>
+
+</html>
