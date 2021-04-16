@@ -215,6 +215,7 @@ body{
     position:absolute;
     outline: 5px solid transparent;
    transform: matrix(0.5, 0.5, -0.5, 0.5, 100, 0);
+     transform-origin: center;
 }
 .f8, .f9, .f10{
     position:absolute;
