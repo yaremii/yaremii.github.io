@@ -1,0 +1,46 @@
+.title {
+font-family: "Roboto", sans-serif;
+font: 50px;
+}
+.rounded {
+counter-reset: li; 
+list-style: none; 
+font: 23px "Trebuchet MS", "Lucida Sans";
+padding: 80;
+text-shadow: 0 2px 0 rgba(255,255,255,.5);
+}
+.rounded a {
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+margin: .5em 0;
+background: #E6E6FA;
+color: #444;
+text-decoration: none;
+border-radius: .3em;
+transition: .3s ease-out;
+}
+.rounded a:hover {background: #E9E4E0;}
+.rounded a:hover:before {transform: rotate(360deg);}
+.rounded a:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -1.3em;
+top: 50%;
+margin-top: -1.3em;
+background: #BC8F8F;
+height: 2em;
+width: 2em;
+line-height: 2em;
+border: .3em solid white;
+text-align: center;
+font-weight: bold;
+border-radius: 2em;
+transition: all .4s ease-out;
+}
+.body{
+ background-image: url(back.jpg);
+ background-attachment: fixed;
+ background-size: 100%;
+}

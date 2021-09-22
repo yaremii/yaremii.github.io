@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script>
+        function fun() {
+            let x, y, result;
+            x = parseInt(main_form.t_x.value);
+            y = parseInt(main_form.t_y.value);
+            if (y != 5 && x != 0) result = (3 / 5) * Math.pow(x, 1 / 2) * y; else
+                if (y * Math.pow(x, 2) != 3 * x || Math.pow(x, 3) != 5 * x * y) result = x / Math.pow(y, 1 / 2); else
+                    result = x / Math.pow(y, 2)
+            main_form.t_result.value = "" + result;
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <h3> x: </h3><input type="text" id="t_x" value="10">
+            <h3> y: </h3><input type="text" id="t_y" value="-2">
+            <h3>result: </h3><input type="text" id="t_result" value=""><br><br>
+            <input type="button" onClick="fun();" value="Розрахувати">
+        </form>
+    </div>
+</body>
+
+</html>
