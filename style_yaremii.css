@@ -39,4 +39,7 @@ border-radius: 2em;
 transition: all .4s ease-out;
 }
 .body{
- background-image: url(back.jpg)}
+ background-image: url(back.jpg)
+ background-attachment: fixed;
+ background-size: 100%;
+}
