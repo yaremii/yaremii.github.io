@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta char-set=utf8>
+    </meta>
+    <script Language="JavaScript">
+        var timeStr, dateStr;
+        function clock() {
+            now = new Date();
+            hours = now.getHours();
+            minutes = now.getMinutes();
+            seconds = now.getSeconds();
+            timeStr = "" + hours;
+            timeStr += ((minutes < 10) ? ":0" : ":") + minutes;
+            timeStr += ((seconds < 10) ? ":0" : ":") + seconds;
+            date = now.getDate();
+            month = now.getMonth() + 1;
+            year = now.getYear() + 1900;
+            dateStr = "" + ((month < 10) ? "0" : "") + month;
+            dateStr += ((date < 10) ? ":0" : ":") + date;
+            dateStr += ":" + year;
+            dateStr += ":" + timeStr
+            document.clock.date.value = dateStr;
+            Timer = setTimeout("clock()", 1000);
+        }
+    </script>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body onLoad="clock()">
+    <div class="form">
+    <form name="clock">
+        Актуальна дата та час: <br><br>
+        <input type="text" name="date" size="16" value="">
+    </form>
+    </div>
+</body>
+
+</html>
