@@ -1,0 +1,47 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #DCDCDC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+.container img {
+    width: 100%;
+    z-index: -1;
+}
+button {
+    height: 10%;
+    cursor: pointer;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    display: flex;
+}
+button .arrow {
+    border: solid #ffff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+}
+#right-btn {
+    margin: auto 0 auto -2em;
+}
+#left-btn {
+    z-index: 0;
+    margin: auto -2em auto 0;
+}
+#right-btn .arrow {
+    transform: rotate(-45deg);
+}
+#left-btn .arrow {
+    transform: rotate(135deg);
+}

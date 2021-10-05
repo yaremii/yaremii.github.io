@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script>
+        const letters = ["а", "б", "в", "г", "ґ", "д", "е", "є", "ж", "з", "и", "і", "ї", "й", "к", "л",
+            "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ь", "ю", "я", " "];
+        function createKeyboard() {
+            let keys = ""
+            letters.map((key, index) => {
+                if (index % 11 === 0) {
+                    keys += "<br>"
+                }
+                keys += `<button onclick="addSymbol('${key}')">${key}</button>`
+            })
+            screenKeyboard.innerHTML = keys;
+        }
+        function addSymbol(key) {
+            document.getElementById('display').value += key;
+        }        
+        function clean() {
+            document.getElementById('display').value = "";
+        }
+    </script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body onload="createKeyboard()">
+    <div class="form">
+        <textarea id="display" rows="7" cols="90" readonly></textarea>
+        <div id="screenKeyboard"></div>
+        <button type="button" onclick="clean()">Очистити</button>
+    </div>
+</body>
+
+</html>

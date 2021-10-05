@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style6.css">
+</head>
+
+<body>
+    <div class="form">
+        <ul class="tree" id="tree">
+            <li>Food
+                <ul>
+                    <li>Fruits
+                        <ul>
+                            <div>
+                                <li>Apple</li>
+                                <li>Pineapple</li>
+                                <li>Appricot</li>
+                                <li>Pear</li>
+                                <li>Lemon</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>Vegetables
+                        <ul>
+                            <div>
+                                <li>Potatoes</li>
+                                <li>Beetroot</li>
+                                <li>Carrots</li>
+                                <li>Pear</li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        for (let li of tree.querySelectorAll('li')) {
+            let span = document.createElement('span');
+            li.prepend(span);
+            span.append(span.nextSibling);
+        }
+        tree.onclick = function (event) {
+            if (event.target.tagName != 'SPAN') return;
+            let childrenContainer = event.target.parentNode.querySelector('ul');
+            if (!childrenContainer) return;
+            childrenContainer.hidden = !childrenContainer.hidden;
+        }
+    </script>
+</body>
+
+</html>

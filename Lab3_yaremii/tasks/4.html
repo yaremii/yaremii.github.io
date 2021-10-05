@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="left-btn"><i class="arrow"></i></button>
+        <img id="carousel" src="" alt="">
+        <button id="right-btn"><i class="arrow"></i></button>
+    </div>
+
+    <script>
+        const img = document.getElementById('carousel');
+        const rightBtn = document.getElementById('right-btn');
+        const leftBtn = document.getElementById('left-btn');
+
+        let pictures = ['https://live.staticflickr.com/65535/51393039622_859f0e189d_k.jpg',
+'https://live.staticflickr.com/65535/51357626156_957dd6121c_k.jpg',
+'https://live.staticflickr.com/65535/51314121302_40a77a9368_k.jpg'];
+
+        img.src = pictures[0];
+        let position = 0;
+
+        function moveRight() {
+            if (position >= pictures.length - 1) {
+                position = 0
+                img.src = pictures[position];
+                return;
+            }
+            img.src = pictures[position + 1];
+            position++;
+        }
+
+        function moveLeft() {
+            if (position < 1) {
+                position = pictures.length - 1;
+                img.src = pictures[position];
+                return;
+            }
+            img.src = pictures[position - 1];
+            position--;
+        }
+
+        rightBtn.addEventListener("click", moveRight);
+        leftBtn.addEventListener("click", moveLeft);
+    </script>
+</body>
+
+</html>

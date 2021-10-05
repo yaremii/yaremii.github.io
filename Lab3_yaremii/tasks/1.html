@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script>
+        function fun() {
+            let width = +document.getElementById('width').value;
+            let length = +document.getElementById('length').value;
+            
+            let perimeter = width * 2 + length * 2;
+            let area = length * width;
+            let diagonal = Math.sqrt(length ** 2 + width ** 2);
+
+            document.getElementById("perimeter").innerText = perimeter;
+            document.getElementById("area").innerText = area;
+            document.getElementById("diagonal").innerText = diagonal;
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form">
+        <form id="main_form">
+            <table cellspacing="0px" cellpadding="5pt">
+                <tr>
+                    <td>Введіть ширину прямокутника:</td>
+                    <td> <input type="text" id="width" onChange="fun()"></td>
+                </tr>
+                <tr>
+                    <td>Введіть довжину прямокутника:</td>
+                    <td><input type="text" id="length" onChange="fun()"></td>
+                </tr>
+                <div>
+                    <span>Периметр:</span>
+                    <span id="perimeter"></span>
+                </div>
+                <div>
+                    <span>Площа:</span>
+                    <span id="area"></span>
+                </div>
+                <div>
+                    <span>Довжина діагоналі:</span>
+                    <span id="diagonal"></span>
+                </div>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

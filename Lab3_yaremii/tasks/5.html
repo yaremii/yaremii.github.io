@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script>
+        let score = 0, task = -1, n1, n2;
+
+        function nextTask() {
+            if (check()) score++;
+            task++;
+            n1 = Math.floor(Math.random() * 9 + 1);
+            n2 = Math.floor(Math.random() * 9 + 1);
+            if (task === 10) alert(`Тест завершено! Ваш результат: ${(score / 10) * 100}%`)
+            document.getElementById("number").value = "";
+            document.getElementById("message4").innerText = "";
+            document.getElementById("task").innerText = `${n1} * ${n2} =`;
+            document.getElementById("message1").innerText = `Загальний рахунок: ${(score / 10) * 100}%`;
+            document.getElementById("message2").innerText = `(правильних ${score} відповідей з 10)`;
+            document.getElementById("message3").innerText = `Завдання №${task + 1}`;
+        }
+        
+        function check() {
+            if ((n1 * n2) === +document.getElementById("number").value) {
+                document.getElementById("message4").innerText = "Правильно!";
+                return true;
+            }
+            else {
+                document.getElementById("message4").innerText = `Помилка! Правильний результат: ${n1 * n2}`;
+                return false;
+            }
+        }
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="nextTask()">
+    <div class="form">
+        <form id="main_form">
+            <h2 id="message1"></h2>
+            <h3 id="message2"></h3>
+            <h4 id="message3"></h4>
+            <div class="inputBlock">
+                <label id="task"></label>
+                <br> <br>
+                <input type="text" id="number">
+            </div>
+            <h3 id="message4"></h3>
+            <input type="button" value="Перевірити" onclick="check()">
+            <input type="button" value="Наступний приклад" onclick="nextTask()">
+        </form>
+    </div>
+</body>
+
+</html>

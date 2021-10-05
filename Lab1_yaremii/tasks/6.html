@@ -1,0 +1,49 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+  
+    <script>
+        const continents = ["Євразія", "Північна Америка", "Південна Америка", "Африка", "Австралія", "Антарктида"];
+        const density = [99.8, 22.9, 21.4, 42.1, 3.3, 0.000283];
+        const area = [54.7, 24.93, 17.8, 30.3, 7.68, 14.2]
+
+        function getIndex() {
+            let continent = main_form.continent.value;
+            let index = continents.indexOf(continent);
+            if (index === -1) {
+                alert("Ваш запит невірний!!!");
+            }
+            return index
+        }
+
+        function showPopulation() {
+            let index = getIndex()
+            main_form.population.value = density[index] * area[index] + " млн осіб";
+        }
+
+        function showDensityAndArea() {
+            let index = getIndex()
+            main_form.densityAndArea.value = density[index] + " осіб/км^2, " + area[index] + "млн км^2";
+        }
+    </script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+    <form id="main_form">
+        <input type="text" id="continent" placeholder="Введіть назву континенту"><br>
+        <label>Щільність населення і площа</label><br>
+        <input type="text" id="densityAndArea" readonly><br>
+        <input type="button" value="Показати" onClick="showDensityAndArea()"><br>
+        <label>Населення</label><br>
+        <input type="text" id="population" readonly><br>
+        <input type="button" value="Показати" onClick="showPopulation()"><br>
+    </form>
+</div>
+
+</body>
+
+</html>
