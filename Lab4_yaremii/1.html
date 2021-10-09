@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function checkTest() {
+            let t1 = document.getElementsByName('mountain');
+            let t2 = document.getElementsByName('river');
+            let t3 = document.getElementsByName('ocean');
+            let t4 = document.getElementsByName('peninsula');
+            let result = 0;
+            for (let i = 0; i < t1.length; i++) {
+                if (t1[i].checked && t1[i].value === '1') result++;
+            }
+            for (let i = 0; i < t2.length; i++) {
+                if (t2[i].checked && t2[i].value === '2') result++;
+            }
+            for (let i = 0; i < t3.length; i++) {
+                if (t3[i].checked && (t3[i].value === '2' || t3[i].value === '3')) result++;
+            }
+            for (let i = 0; i < t4.length; i++) {
+                if (t4[i].checked && (t4[i].value === '2' || t4[i].value === '4')) result++;
+            }
+            if (document.getElementById("task5").value === "4") result++;
+            if (document.getElementById("task6").value === "Тихий") result++;
+            document.getElementById('result').value = result;
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h1>Самостійна робота з географії</h1>
+        <form>
+            <p>1. Виберіть рядок, де всі перелічені гірські масиви розташовані на території Євразії<br><br>
+                <input type="radio" name="mountain" value="1">
+                <label>Скандинавські гори, Карпати, Атлас </label>
+                <br>
+                <input type="radio" name="mountain" value="2">
+                <label>Піренеї, Кавказ, Уральські гори</label>
+                <br>
+                <input type="radio" name="mountain" value="3">
+                <label>Кордильєри, Аппалачі, Гімалаї</label>
+                <br>
+                <input type="radio" name="mountain" value="4">
+                <label>Анди, Тянь-Шань, Памір</label>
+            </p>
+            <p>2. Виберіть річки басейну Атлантичного океану<br><br>
+                <input type="radio" name="river" value="1">
+                <label>Дунай, Рейн, Дніпро</label>
+                <br>
+                <input type="radio" name="river" value="2">
+                <label>Лена, Єнісей, Об</label>
+                <br>
+                <input type="radio" name="river" value="3">
+                <label>Хуанхе, Яндзи, Амур </label>
+                <br>
+                <input type="radio" name="river" value="4">
+                <label>Ганг, Євфрат, Тигр</label>
+            </p>
+            <p>3. Які океани омивають Африку? <br><br>
+                <input type="checkbox" name="ocean" value="1">
+                <label>Тихий</label>
+                <br>
+                <input type="checkbox" name="ocean" value="2">
+                <label>Атлантичний</label>
+                <br>
+                <input type="checkbox" name="ocean" value="3">
+                <label>Індійський</label>
+                <br>
+                <input type="checkbox" name="ocean" value="4">
+                <label>Північно-льодовитий</label>
+                <br>
+            </p>
+            <p>4. Виберіть півострови, що розташовані НЕ в Євразії<br><br>
+                <input type="checkbox" name="peninsula" value="1">
+                <label>п-ів Камчатка</label>
+                <br>
+                <input type="checkbox" name="peninsula" value="2">
+                <label>п-ів Сомалі</label>
+                <br>
+                <input type="checkbox" name="peninsula" value="3">
+                <label>п-ів Індокитай</label>
+                <br>
+                <input type="checkbox" name="peninsula" value="4">
+                <label>п-ів Лабрадор </label>
+                <br>
+            </p>
+            <p>Скільки океанів на нашій планеті?</p>
+            <input type="number" id="task5" min="1" max="4">
+            <p>Найглибший океан на Землі - це ... (введіть одне слово з великої букви)</p>
+            <input type="text" id="task6">
+            <br><br>
+            <p>
+                <input type="button" id="calc" onclick="checkTest()" value="Підтвердити">
+            </p>
+            <br> 
+            Ваш результат: <input type="text" id="result" readonly>
+        </form>
+    </div>
+</body>
+
+</html>
