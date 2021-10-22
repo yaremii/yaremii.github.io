@@ -1,0 +1,61 @@
+.header {
+    text-align: center;
+    color: #fc9eff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: #f6892a;
+    background-attachment: fixed;
+    background-size: 100%;
+    font-family: Helvetica, sans-serif; 
+    font-size: 26px;
+}
+.mainBlock {
+    display: flex;
+    flex-direction: row;
+    background-image: url("photos/bg2.png");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+.person img{
+    width: 60%;
+    height: 75%;
+    border-radius: 5px;
+    border: 3px solid #ef3455;
+}
+.person img:hover{
+cursor: pointer;
+}
+.active img{
+transform:scale(1.1)
+}
+.person h3{
+    color: #fedfff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: Helvetica, sans-serif; 
+    font-size: 20px;
+}
+.active h3{
+    color: #0c665d;
+    text-shadow: none;
+}
+.textBlock {
+    margin-top: 40px;
+    text-align: center;
+}
+.textBlock p {
+    color: white;
+    font-size: 20px;
+}
+.tabcontent {
+    display: none;
+    padding: 12px 12px;
+    background-color: #f6892a;
+    font-family: Helvetica, sans-serif; 
+    color: #0c665d;
+    font-size: 18px;
+}
