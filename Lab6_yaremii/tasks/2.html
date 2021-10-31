@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form"><br>
+        <form id="main_form">
+        </form>
+    </div>
+    <script>
+        let s = "anya.yaremii@gmail.com";
+        let r = /^([a-z0-9]+)(\.[a-z0-9]+)*@([a-z0-9]+)(\.[a-z0-9]+)*$/i;
+        let a = s.match(r);
+        let inputForms = '';
+        for (i = 0; i < a.length; i++) {
+            inputForms += `<input type=\"text\" id=\"mountain\" value = "a[${i}]:   ${a[i]}"> <br>`
+        }
+        main_form.innerHTML = inputForms;
+    </script>
+</body>

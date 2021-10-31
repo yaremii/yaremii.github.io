@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <h3>Завдання 1</h3>
+            <input type="text" id="task1" placeholder="Введіть числа">
+            <input type="button" value="Обернути послідовність" onclick="reverseNumber()">
+            <p id="result1"></p>
+            <h3>Завдання 2</h3>
+            <input type="text" id="task2" placeholder="Введіть числа">
+            <input type="button" value="Видалити нулі" onclick="noZeros()">
+            <p id="result2"> </p>
+            <h3>Завдання 3</h3>
+            <input type="text" id="task3" placeholder="Введіть текст">
+            <input type="button" value="Обернути рядок" onclick="reverseString()">
+            <p id="result3"></p>
+            <h3>Завдання 4</h3>
+            <input type="text" id="task4" value="Я не люблю морозиво">
+            <input type="button" value="Поміняти слова місцями та покласти коми" onclick="replaceText()">
+            <p id="result4"></p>
+        </form>
+    </div>
+    <script>
+        function reverseNumber() {
+            str = document.getElementById("task1").value;
+            result1.innerHTML = str.split(" ").reverse().join(" ");
+        }
+        function noZeros() {
+            str = document.getElementById("task2").value;
+            result2.innerHTML = str.replace(/0/g, '');
+        }
+        function reverseString() {
+            str = document.getElementById("task3").value;
+            result3.innerHTML = str.split("").reverse().join("");
+        }
+        function replaceText() {
+            str = document.getElementById("task4").value;
+            var arr = str.split(' ');
+            var temp = arr[1];
+            arr[1] = arr[2];
+            arr[2] = temp;
+            str = arr.join(',');
+            result4.innerHTML = str;
+        }
+    </script>
+</body>

@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <div class="group">
+                <h3>Ім'я</h3>
+                <div class="field">
+                    <input type="text" id="field1">
+                </div>
+                <span id="message1"></span>
+            </div>
+
+            <div class="group">
+                <h3>Прізвище</h3>
+                <div class="field">
+                    <input type="text" id="field2">
+                </div>
+                <span id="message2"></span>
+            </div>
+
+            <div class="group">
+                <h3>Логін</h3>
+                <div class="field">
+                    <input type="text" id="field3">
+                </div>
+                <span id="message3"></span>
+            </div>
+
+            <div class="group">
+                <h3>Пароль</h3>
+                <div class="field">
+                    <input type="text" id="field4">
+                </div>
+                <span id="message4"></span>
+            </div>
+
+            <div class="group">
+                <h3>Поштовий індекс</h3>
+                <div class="field">
+                    <input type="text" id="field5">
+                </div>
+                <span id="message5"></span>
+            </div>
+
+            <div class="group">
+                <h3>Електронна пошта</h3>
+                <div class="field">
+                    <input type="text" id="field6">
+                </div>
+                <span id="message6"></span>
+            </div>
+            <input type="button" value="Завершити реєстрацію" onclick="check()">
+        </form>
+    </div>
+    <script>
+        const fullnameRegex = /^([A-ZА-ЩЬЮЯҐЄІЇ])+([a-zа-щьюяґєії]+)$/;
+        const loginRegex = /^([a-zA-Z])+$/;
+        const passwordRegex = /^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{6,}$/
+        const indexRegex = /^([0-9]){5}$/;
+        const emailRegex = /^([a-z0-9]+)(\.[a-z0-9]+)*@([a-z0-9]+)(\.[a-z0-9]+)*$/i;
+
+        const messages = ["Неправильно введене ім'я", "Неправильно введене прізвище", "Неправильно введений логін",
+            "Неправильно введений пароль", "Неправильно введений індекс", "Неправильно введена пошта"];
+        let messageIndex;
+
+        function checkOneField(id, messageId, regex) {
+            str = document.getElementById(id).value;
+            result = str.match(regex);
+            messageNum = document.getElementById(messageId);
+            result ? messageNum.innerHTML = "<img src='1.png' width='20'> " : messageNum.innerHTML = messages[messageIndex];
+            messageIndex++;
+        }
+
+        function check() {
+            messageIndex = 0;
+            checkOneField("field1", "message1", fullnameRegex);
+            checkOneField("field2", "message2", fullnameRegex);
+            checkOneField("field3", "message3", loginRegex);
+            checkOneField("field4", "message4", passwordRegex);
+            checkOneField("field5", "message5", indexRegex);
+            checkOneField("field6", "message6", emailRegex);
+        }
+    </script>
+</body>
