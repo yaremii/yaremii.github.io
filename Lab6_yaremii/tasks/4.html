@@ -32,7 +32,11 @@
         }
         function noZeros() {
             str = document.getElementById("task2").value;
-            result2.innerHTML = str.replace(/0/g, '');
+            var arr = str.split(' ')
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == 0) arr[i] = '';
+            }
+            result2.innerHTML = arr.join(' ');
         }
         function reverseString() {
             str = document.getElementById("task3").value;
