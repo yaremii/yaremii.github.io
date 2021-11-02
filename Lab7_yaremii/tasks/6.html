@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+             $('#one').bind("click", function () {
+               alert("Ви натиснули один раз")
+            }); 
+            $('#double').bind("dblclick", function () {
+                alert("Ви натиснули двічі")
+            });         
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <div id="text">
+                <h1>Демонстрація </h1>
+                <h3>bind: click, dblclick, alert</h3>
+                <input type="button" value="Натисніть 1 раз" id="one">
+                <input type="button" value="Натисніть 2 рази" id="double">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

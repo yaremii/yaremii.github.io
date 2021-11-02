@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#text').bind("click", function () {
+                $("#text").addClass("frameFilling");
+            });
+            $('#text').bind("dblclick", function () {
+                $("#text").removeClass("frameFilling");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <div id="text">
+                <h1>Демонстрація </h1>
+                <h3>bind: click, dblclick, addClass, removeClass</h3>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

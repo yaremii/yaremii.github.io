@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#one').bind("click", function () {
+                $("#photo").show();
+            });
+            $('#photo').bind("click", function () {
+                $("#photo").hide();
+            });
+
+            $('#photo').bind("mouseover", function () {
+                $("#hidden").show();
+            });
+            $('#photo').bind("mouseout", function () {
+                $("#hidden").hide();
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <div id="text">
+                <h1>Демонстрація</h1>
+                <h3>mouseout, mouseover</h3>
+                <input type="button" value="Натисніть сюди" id="one">
+                <img id="photo" src="4.jpg" width="400px" hidden>
+                <h3 id="hidden" hidden>це котик</h3>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

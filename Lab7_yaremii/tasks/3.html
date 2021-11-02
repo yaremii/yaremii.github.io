@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button').click(function () {
+                $("p:first").text("DOM first!");
+                $("p:last").text("DOM last!");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <h1> Контент сторінки </h1>
+            <a href="#" class="button"> Натисніть, щоб показати текст </a>
+            <br><br>
+            <p></p>
+            <p>DOM middle!</p>
+            <p></p>
+        </form>
+    </div>
+</body>
+
+</html>

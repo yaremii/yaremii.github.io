@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+            <h2> Введіть в текстове поле слово 'correct'</h2>
+            <form id="main_form" action="javascript:alert('Успішно!');">
+                <div>
+                    <input type="text">
+                    <input type="submit" value="Перевірити">
+                </div>
+            </form>
+            <span></span>
+        </div>
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $("form").submit(function () {
+            if ($("input:first").val() == "correct") {
+                $("span").text("Перевіряємo...").show();
+                return true;
+            }
+            $("span").text("Неправильно!").show().fadeOut(1000);
+            return false;
+        });
+    </script>
+</body>
+
+</html>

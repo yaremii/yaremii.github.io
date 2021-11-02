@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#text").hover(
+                function () {
+                    $("#hidden").show();
+                    $("#text").addClass("frame");
+                    $("#shown").addClass("mainText");
+                }, function () {
+                    $("#hidden").hide();
+                    $("#shown").removeClass("mainText");
+                }
+            );
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <div id="text">
+                <h1 id="shown" class= "mainText">Демонстрація </h1>
+                <h3 id="hidden" hidden>hover, addClass і removeClass</h3>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

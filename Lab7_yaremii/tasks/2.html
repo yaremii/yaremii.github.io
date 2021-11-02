@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $text = $('#hide_text');
+            $text.hide();
+            $('.button').click(function () {
+                $text.show(200);
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <h1> Контент сторінки </h1>
+            <a href="#" class="button"> Натисніть, щоб показати текст </a>
+            <br><br>
+            <div id="hide_text"> Демонстраційний прихований текст </div>
+        </form>
+    </div>
+</body>
+
+</html>
