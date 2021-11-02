@@ -61,13 +61,13 @@ button {
 .frame{
   border-style: groove;
   border-width: 10px;
-  border-color: #da4453;
+  border-color: #ff9ca6;
 }
 .mainText{
   color: #da4453;
 }
 .frameFilling{
-  background-color: #da445357;
+  background-color: #ff8989;
   border-style: groove;
   border-width: 10px;
   border-color: #da4453;
