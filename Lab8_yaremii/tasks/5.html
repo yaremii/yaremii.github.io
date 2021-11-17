@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#first").click(function () {
+                $("li:contains((обов'язково))").css("background-color", "#da4453");
+                $(".modify").each(function () {
+                    alert("Складові страви: " + $(this).text())
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <div class="list">
+            <li class="modify">Палички</li>
+            <ul>
+                <li>Мука (обов'язково)</li>
+                <li>Сир (обов'язково)</li>
+                <ul>
+                    <li>плавлений</li>
+                    <li>російський</li>
+                </ul>
+                <li>М'ясо</li>
+                <ul>
+                    <li>свинина</li>
+                    <li>яловичина</li>
+                </ul>
+                <li>Приправи</li>
+                <ul>
+                    <li>сіль (обов'язково)</li>
+                    <li>перець</li>
+                    <li>засушений часник</li>
+                    <li>кунжут</li>
+                </ul>
+                <li>Дріжджі (обов'язково)</li>
+                <li>Вода (обов'язково)</li>
+                <li>Масло</li>
+            </ul>
+            <li class="modify">Соус</li>
+            <ul>
+                <li>сметана</li>
+                <li>майонез</li>
+                <li>італійські трави</li>
+                <li>сіль</li>
+            </ul>
+        </div>
+        <button id="first">.contains() і .each()</button>
+    </div>
+</body>
+
+</html>

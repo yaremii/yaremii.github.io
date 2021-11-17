@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#first").click(function () {
+                $("<span>Надія є!</span>").insertAfter("h4");
+            });
+
+            $("#second").click(function () {
+                $("p").clone().insertAfter("#second");
+            });
+
+            $("#third").click(function () {
+                var x = $("img").position();
+                alert("Позиція зліва: " + x.left);
+            });
+
+            $(document).ready(function () {
+                $("#fourth").click(function () {
+                    $("#photo").height(function (n, c) {
+                        return c - 10;
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <h4>Допоки сонце сяє, поки вода тече</h4><br><br>
+        <button id="first">.insertAfter()</button><br><br>
+
+        <h3>Лиха біда минає, просто повір у це</h3>
+        <p>Надія є!</p>
+        <button id="second">.clone()</button><br><br><br>
+
+        <img src="photo/4.jpg" width='300px'><br><br>
+        <button id="third">.position()</button><br><br><br>
+
+        <img src="photo/3.jpg" height= '300px' id="photo"><br><br>
+        <button id="fourth">.height(функцiя)</button>
+    </div>
+
+</body>
+
+</html>

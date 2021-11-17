@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#first").click(function () {
+				$("p").html('Тут вже текст <i>курсивом</i>');
+			});
+
+			$("#second").click(function () {
+				$("h3").css('textShadow', '#ed5565 5px -5px 2px');
+			});
+
+			$("#third").click(function () {
+				$("input:text").val("Це поле вже заповнене");
+			});
+
+			$("#attr1").click(function () {
+				alert("Опис зображення: " + $("#photo1").attr("alt"));
+			});
+
+			$("#attr2").click(function () {
+				$("#photo2").attr("width", "400");
+			});
+
+			$("#attr3").click(function () {
+				$("#photo3").attr({ width: "250", height: "250" });
+			});
+
+			$("#attr4").click(function () {
+				$("#photo4").attr("width", function (n, v) {
+					return v - 50;
+				});
+			});
+
+			$("#attr5").click(function () {
+				$("#photo5").removeAttr('src');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="form">
+		<p>Тут простий текст, який зміниться</p>
+		<h4>Цей текст таким і залишиться</h4>
+		<p>Тут простий текст, який зміниться</p>
+		<button id="first">.html()</button><br><br>
+
+		<h3>Додай тіні</h3>
+		<button id="second">.css()</button><br><br><br>
+
+		<input type="text" value="Пусте поле">
+		<button id="third">.val()</button><br><br><br>
+
+		<img src="photo/3.jpg" width='300px' id="photo1" alt="Це котик, якому холодно">
+		<button id="attr1">.attr (ім'я атрибута)</button>
+
+		<img src="photo/2.jpg" width='300px' id="photo2">
+		<button id="attr2">.attr (ім'я атрибута, значення)</button>
+
+		<img src="photo/4.jpg" width='300px' id="photo3">
+		<button id="attr3"> .attr (атрибути)</button>
+
+		<img src="photo/4.jpg" width='300' id="photo4">
+		<button id="attr4">.attr (ім'я атрибута, функція)</button>
+
+		<img src="photo/1.jpg" width='300px' id="photo5" alt="Тут було миле поросятко"><br>
+		<button id="attr5">.del</button>
+	</div>
+
+</body>
+
+</html>

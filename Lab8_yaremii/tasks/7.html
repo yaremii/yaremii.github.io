@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#first").click(function () {
+                $("img").slideUp(1000);
+            });
+            $("#second").click(function () {
+                $("img").slideDown(1000);
+            });
+            $("#third").click(function () {
+                $("img").slideToggle(1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <img src="photo/2.jpg" height='300px'><br><br>
+        <button id="first">.slideUp()</button>
+        <button id="second">.slideDown()</button>
+        <button id="third">.slideToggle()</button>
+    </div>
+</body>
+
+</html>

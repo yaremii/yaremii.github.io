@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#first").click(function () {
+                $("p:not(#title)").css("color", "white");
+                $("p:eq(1)").css("background-color", "red");
+                $("p:eq(2)").css("background-color", "orange");
+                $("p:eq(3)").css("background-color", "yellow");
+                $("p:eq(4)").css("background-color", "green");
+                $("p:eq(5)").css("background-color", "lightblue");
+                $("p:eq(6)").css("background-color", "blue");
+                $("p:eq(7)").css("background-color", "violet");
+            });
+
+            $("#second").click(function () {
+                $("h3").add("h4").css("background", "#da4453");
+            });
+
+            $("#third").click(function () {
+                $("h5").has("span").css("background-color", "#da4453");
+            });
+
+            $("#fourth").click(function () {
+                $("img").parents().css({ "border": "2px solid black" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <p id="title">Кольори веселки</p>
+        <p>Чи</p>
+        <p>Омелько</p>
+        <p>жити</p>
+        <p>зможе</p>
+        <p>без</p>
+        <p>своїх</p>
+        <p>фантазій</p>
+        <button id="first">.eq() i .not()</button><br><br>
+
+        <h3>Тут якийсь</h3>
+        <h4>текст</h4>
+        <button id="second">.add()</button><br><br>
+
+        <h5>А й правда, <span>крилатим </span>ґрунту не треба.</h5>
+        <h5>Землі немає, то буде небо.</h5>
+        <h5>Немає поля, то буде воля.</h5>
+        <h5>Немає пари, то будуть хмари.</h5>
+        <button id="third">.has()</button><br><br><br>
+
+        <img src="photo/3.jpg" height='300px'><br><br>
+        <button id="fourth">.parents()</button>
+    </div>
+</body>
+
+</html>

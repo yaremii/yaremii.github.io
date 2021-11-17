@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script src="jquery.easing.1.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".button").click(function () {
+                $(".first").animate({
+                    height: "150px",
+                    fontSize: "2em",
+                    fontSize: "2em",
+                    borderWidth: "5px",
+                }, {
+                    duration: 1500,
+                    easing: "easeOutElastic",
+                    complete: function () {
+                        $(this).text("Надобраніч").css("color", "#003ea8");
+                        $("#photo").attr({ width: "300", height: "300", src: "photo/5.jpg" });
+                    },
+                    progress: function () {
+                        $("img").css("border-color", '#' + (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase());
+                    },
+                    done: function () {
+                        $(".form").css("background-color", "#ffcfd3");
+                    },
+                    fail: function () {
+                        alert('Виникла якась помилка');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <img src="photo/4.jpg" id="photo" width="300px"><br><br>
+        <button class="button">.animate()</button>
+        <div class="first">Котик хоче спати</div>
+    </div>
+</body>
+
+</html>

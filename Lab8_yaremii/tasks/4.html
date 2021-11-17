@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#first").click(function () {
+                $("li").filter(".modify").css("font-weight", "bold");
+                $("li").filter(function (index) {
+                    return ((index + 1) % 3 === 0)
+                }).css("background-color", "#da4453");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <div class="list">
+            <li class="modify">Палички</li>
+            <ul>
+                <li>Мука</li>
+                <li>Сир</li>
+                <ul>
+                    <li>плавлений</li>
+                    <li>російський</li>
+                </ul>
+                <li>М'ясо</li>
+                <ul>
+                    <li>свинина</li>
+                    <li>яловичина</li>
+                </ul>
+                <li>Приправи</li>
+                <ul>
+                    <li>сіль</li>
+                    <li>перець</li>
+                    <li>засушений часник</li>
+                    <li>кунжут</li>
+                </ul>
+                <li>Дріжджі</li>
+                <li>Вода</li>
+                <li>Масло</li>
+            </ul>
+            <li class="modify">Соус</li>
+            <ul>
+                <li>сметана</li>
+                <li>майонез</li>
+                <li>італійські трави</li>
+                <li>сіль</li>
+            </ul>
+        </div>
+        <button id="first">Модифікувати</button>
+    </div>
+</body>
+
+</html>
