@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="task_yaremii.css">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+    <div class="form">
+        <form id="main_form">
+            <h1>Облік відомостей про цехи кондитерської фабрики </h1>
+            <br>
+            <h3>Цехи <span class="star">*</span></h3>
+            <div class="group">
+
+                <input type="radio" name="department" value="1">
+                <label>Цех 1</label>
+                <br>
+                <input type="radio" name="department" value="2">
+                <label>Цех 2</label>
+                <br>
+                <input type="radio" name="department" value="3">
+                <label>Цех 3</label>
+                <br>
+                <input type="radio" name="department" value="4">
+                <label>Цех 4</label>
+                <br>
+                <span id="message1"></span>
+            </div>
+            <br> <br>
+            <h3>Керівники</h3>
+            <div class="group">
+                <h4>ПІБ керівника <span class="star">*</span></h4>
+                <div class="field">
+                    <input type="text" id="field2">
+                </div>
+                <span id="message2"></span>
+
+                <h4>Електронна пошта <span class="star">*</span></h4>
+                <div class="field">
+                    <input type="text" id="field3">
+                </div>
+                <span id="message3"></span>
+
+                <h4>Телефон <span class="star">*</span></h4>
+                <div class="field">
+                    <input type="text" id="field4">
+                </div>
+                <span id="message4"></span>
+
+                <h4>Дата початку роботи</h4>
+                <div class="field">
+                    <input type="date" id="date" name="date" />
+                </div>
+
+                <h4>Адреса виробництва</h4>
+                <div class="field">
+                    <input type="text" value="м. Калуш, вул. Промислова, 23А" id="field5">
+                </div>
+
+                <h4>Кількість робочих годин на тиждень</h4>
+                <div class="field">
+                    <input type="number" min="20" max="90" id="field6">
+                </div>
+
+            </div>
+            <br> <br>
+            <h3>Вид продукції</h3>
+            <div id="box">
+                <input type="checkbox" name="product" value="Кекси">
+                <label>Кекси</label>
+                <br>
+                <input type="checkbox" name="product" value="Торти">
+                <label>Торти</label>
+                <br>
+                <input type="checkbox" name="product" value="Печиво">
+                <label>Печиво</label>
+                <br>
+                <input type="checkbox" id="box1" name="product" value="Хлібні вироби" checked>
+                <label>Хлібні вироби</label>
+                <br>
+                <input type="checkbox" name="product" value="Цукерки">
+                <label>Цукерки</label>
+                <br>
+                </p>
+            </div>
+            <br> <br>
+            <input type="button" value="Завершити реєстрацію" onclick="check()">
+            <br> <br>
+            <input type="button" onclick="document.getElementById('main_form').reset()" value="Очистити форму">
+        </form>
+        <div id="table">
+
+        </div>
+        <input type="button" onclick="clearTable()" value="Очистити таблицю">
+    </div>
+    <script>
+        const fullnameRegex = /^(([A-ZА-ЩЬЮЯҐЄІЇ])+([a-zа-щьюяґєії]+)[ ]*){3}$/i;
+        const numberRegex = /^[+]380[0-9]{9}$/;
+        const emailRegex = /^([a-z0-9]+)(\.[a-z0-9]+)*@([a-z0-9]+)(\.[a-z0-9]+)*$/i;
+
+        function checkCheckbox() {
+            if (!($('input[name="department"]:checked').val())) {
+                isValid = false;
+                $("#message1").text("Виберіть цех");
+            };
+        }
+
+        function checkOneField(id, messageId, regex) {
+            str = document.getElementById(id).value;
+            result = str.match(regex);
+            message = document.getElementById(messageId);
+            if (!result) {
+                message.innerHTML = "Введіть коректні дані";
+                $(`#${id}`).css("border-color", "red");
+            }
+            else {
+                $(`#${id}`).css("border-color", "green");
+            }
+        }
+
+        function check() {
+            checkCheckbox();
+            checkOneField("field2", "message2", fullnameRegex);
+            checkOneField("field3", "message3", emailRegex);
+            checkOneField("field4", "message4", numberRegex);
+            createTable();
+        }
+
+        function createTable() {
+            let arr =  $('input[name="product"]:checked').map(function(){
+                return $(this).val();
+            });
+            html = "";
+            html += "<table>"
+            html += `<tr><td>ЦЕХИ</td><td>КЕРІВНИКИ</td><td>ВИД ПРОДУКЦІЇ</td></tr>`
+
+            dep = $('input[name="department"]:checked').val();
+            fullname = $(`#field2`).val();
+            mail = $(`#field3`).val();
+            phone = $(`#field4`).val();
+            date = $(`#date`).val();
+            address = $(`#field5`).val();
+            hours = $(`#field6`).val();
+
+            products = "";
+    
+            for(let string of arr) {
+                products += string + '<br>';
+            }
+            html += `<tr><td>${dep}</td><td>${fullname}<br>${mail}<br>${phone}<br>${date}<br>${address}</td><td>${products}</td></tr>`
+            $(`#table`).html(html);
+        }
+        function clearTable(){
+            html = "";
+            html += "<table>";
+            html += `<tr><td>ЦЕХИ</td><td>КЕРІВНИКИ</td><td>ВИД ПРОДУКЦІЇ</td></tr>`;
+            html += `<tr><td></td><td><br><br><br><br></td><td></td></tr>`
+            $(`#table`).html(html);
+        }
+    </script>
+</body>

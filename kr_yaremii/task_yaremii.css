@@ -1,0 +1,50 @@
+body {
+    background-color: #DCDCDC;
+    font-family: "Roboto", sans-serif;
+  } 
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 600px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  input[type="button"] {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #ed5565;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus {
+    background: #da4453;
+  }
+  input[type=text], input[type=number]{
+    padding: 8px 15px;
+    width: 65%;
+  }
+  button:hover{
+    background: #da4453;
+  }
+  h1, h3{
+    text-align: center;
+  }
+  .star{
+    color: #ff0000; 
+  }
+  .error {
+    border:2px solid red;
+  }
+  td, tr{
+    border:2px solid rgb(0, 0, 0);
+  }
